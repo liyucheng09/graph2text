@@ -11,7 +11,7 @@ JobBatchName = "Example08-Docker-Pytorch"
 # --------------------------------------------
 # Executable and its arguments
 executable    = $ENV(HOME)/.conda/envs/lyc/bin/python
-arguments     = $ENV(HOME)/graph2text/get_oie_tuples.py
+arguments     = $ENV(HOME)/graph2text/get_oie_tuples.py models/openie-model.2020.03.26.tar.gz xsum_with_oie.pkl
 
 # ---------------------------------------------------
 # Universe (vanilla, docker)
@@ -34,7 +34,7 @@ environment = "mount=$ENV(HOME)"
 # -------------------------------------
 # Requirements for the Job (Requirements are explained in further detail in example09.submit_file)
 # NOTE: HasStornext is not valid on orca.
-requirements = (CUDAGlobalMemoryMb > 2500) && (CUDAGlobalMemoryMb <  5000) && \
+requirements = (CUDAGlobalMemoryMb > 3500) && (CUDAGlobalMemoryMb <  6000) && \
 #              (HasStornext) && \
 			   (CUDACapability > 2.0)
 
