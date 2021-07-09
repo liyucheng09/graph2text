@@ -11,7 +11,7 @@ JobBatchName = "Example08-Docker-Pytorch"
 # --------------------------------------------
 # Executable and its arguments
 executable    = $ENV(HOME)/.conda/envs/lyc/bin/python
-arguments     = $ENV(HOME)/graph2text/get_oie_tuples.py models/openie-model.2020.03.26.tar.gz xsum_with_oie.pkl
+arguments     = $ENV(HOME)/graph2text/get_oie_tuples.py $ENV(HOME)/models/openie-model.2020.03.26.tar.gz $ENV(HOME)/xsum_with_oie.pkl
 
 # ---------------------------------------------------
 # Universe (vanilla, docker)
