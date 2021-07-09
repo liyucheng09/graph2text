@@ -11,7 +11,7 @@ JobBatchName = "Example08-Docker-Pytorch"
 # --------------------------------------------
 # Executable and its arguments
 executable    = $ENV(HOME)/.conda/envs/lyc/bin/python
-arguments     = $ENV(HOME)/mnist_pytorch.py
+arguments     = $ENV(HOME)/graph2text/get_oie_tuples.py
 
 # ---------------------------------------------------
 # Universe (vanilla, docker)
@@ -34,7 +34,7 @@ environment = "mount=$ENV(HOME)"
 # -------------------------------------
 # Requirements for the Job (Requirements are explained in further detail in example09.submit_file)
 # NOTE: HasStornext is not valid on orca.
-requirements = (CUDAGlobalMemoryMb > 4500) && (CUDAGlobalMemoryMb <  17000) && \
+requirements = (CUDAGlobalMemoryMb > 2500) && (CUDAGlobalMemoryMb <  5000) && \
 #              (HasStornext) && \
 			   (CUDACapability > 2.0)
 
@@ -43,8 +43,8 @@ requirements = (CUDAGlobalMemoryMb > 4500) && (CUDAGlobalMemoryMb <  17000) && \
 request_GPUs     = 1
 # this needs to be specified for the AI@Surrey cluster if requesting a GPU
 +GPUMem          = 10000  
-request_CPUs     = 1
-request_memory   = 2G
+request_CPUs     = 2
+request_memory   = 6G
 
 #This job will complete in less than 1 hour
 +JobRunTime = 1
