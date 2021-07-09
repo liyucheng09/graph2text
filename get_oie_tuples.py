@@ -2,9 +2,12 @@ from datasets import load_dataset
 from allennlp.predictors.predictor import Predictor
 import allennlp_models.tagging
 import pickle
-predictor = Predictor.from_path("models/openie-model.2020.03.26.tar.gz")
+import sys
 
+model_path, = sys.argv[1:]
+print(f'Model path: {model_path}')
 
+predictor = Predictor.from_path(model_path)
 ds=load_dataset('xsum')
 processed=[]
 for i in ds['validation']:
