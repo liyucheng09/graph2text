@@ -1,0 +1,17 @@
+JobBatchName = "Xsum_LDA_Parsing"
+executable    = $ENV(HOME)/.conda/envs/lyc/bin/python
+arguments     = $ENV(HOME)/graph2text/lda_processing.py $(worker_id) $ENV(HOME)/xsum_lda_processed/ $ENV(HOME)/xsum/XSum-Dataset/lda-train-document-lemma-topic-512-iter-1000/lda.model
+
+universe         = vanilla
+
+log    = c$(cluster).p$(process).log
+output = c$(cluster).p$(process).out
+error  = c$(cluster).p$(process).error
+
+should_transfer_files = YES
+environment = "mount=$ENV(HOME)"
+
+request_CPUs     = 1
+request_memory   = 4G
+
+queue 1 worker_id in 0,1,2,3,4,5,6,7,8,9
