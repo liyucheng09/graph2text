@@ -1,6 +1,6 @@
 JobBatchName = "Saving_Xsum"
 executable    = $ENV(HOME)/.conda/envs/lyc/bin/python
-arguments     = $ENV(HOME)/graph2text/save_xsum_ds.py
+arguments     = $ENV(HOME)/graph2text/save_xsum_ds.py $ENV(HOME)/datasets/xsum
 
 universe         = vanilla
 
@@ -11,8 +11,8 @@ error  = c$(cluster).p$(process).error
 should_transfer_files = YES
 environment = "mount=$ENV(HOME)"
 
-request_CPUs     = 1
-request_memory   = 4G
+request_CPUs     = 4
+request_memory   = 6G
 
 queue 1
 

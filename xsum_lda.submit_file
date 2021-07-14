@@ -1,6 +1,6 @@
 JobBatchName = "Xsum_LDA_Parsing"
 executable    = $ENV(HOME)/.conda/envs/lyc/bin/python
-arguments     = $ENV(HOME)/graph2text/lda_processing.py $(worker_id) $ENV(HOME)/xsum_lda_processed/ $ENV(HOME)/xsum/XSum-Dataset/lda-train-document-lemma-topic-512-iter-1000/lda.model
+arguments     = $ENV(HOME)/graph2text/lda_processing.py $ENV(HOME)/datasets/xsum/ $(worker_id) $ENV(HOME)/xsum_lda_processed/ $ENV(HOME)/xsum/XSum-Dataset/lda-train-document-lemma-topic-512-iter-1000/lda.model
 
 universe         = vanilla
 
