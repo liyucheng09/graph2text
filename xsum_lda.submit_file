@@ -11,7 +11,7 @@ error  = c$(cluster).p$(process).error
 should_transfer_files = YES
 environment = "mount=$ENV(HOME)"
 
-request_CPUs     = 1
-request_memory   = 4G
+request_CPUs     = 2
+request_memory   = 6G
 
-queue 1 worker_id in 0,1,2,3,4,5,6,7,8,9
+queue 1 worker_id in 0,1

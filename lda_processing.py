@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 import gensim
 import json
 from datasets import load_dataset

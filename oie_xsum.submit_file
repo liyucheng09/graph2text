@@ -34,7 +34,7 @@ environment = "mount=$ENV(HOME)"
 # -------------------------------------
 # Requirements for the Job (Requirements are explained in further detail in example09.submit_file)
 # NOTE: HasStornext is not valid on orca.
-requirements = (CUDAGlobalMemoryMb > 3500) && (CUDAGlobalMemoryMb <  6000) && \
+requirements = (CUDAGlobalMemoryMb > 5000) && (CUDAGlobalMemoryMb <  9000) && \
 #              (HasStornext) && \
 			   (CUDACapability > 2.0)
 
